@@ -88,12 +88,18 @@ $(function() {
     });
     $('#1024btn30').click(function() {
         for (var i = 0; i< 30; i++) {
-            var start = new Date().getTime();
+
             $.get( url4, params, function( data ) {
-                var time = (new Date().getTime() - start)/1000;
-                console.log(time)
+                var start = window.performance.now();
+                console.log('s: ' + start)
+                var end = window.performance.now();
+                console.log('end ' + end)
+                var time = (end - start) + data.durationSeconds
                 $(".results102430").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + time);
-                console.log(data.durationSeconds)
+                console.log(data.durationSeconds);
+                console.log(time)
+            }).done(function() {
+
             });
         }
 
