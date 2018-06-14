@@ -1,9 +1,9 @@
 
 $(function() {
-    var url1 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes256MB"
-    var url2 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/Eratosthenes"
-    var url3 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes512MB"
-    var url4 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes1024MB"
+    var url1 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes256MB";
+    var url2 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/Eratosthenes";
+    var url3 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes512MB";
+    var url4 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes1024MB";
     var headers = {
         'content-type': "application/json"
     }
@@ -55,7 +55,7 @@ $(function() {
         let start = window.performance.now();
         x.push(start)
         for (var i = 0; i< 30; i++) {
-            $.get( url4, params, function( data ) {
+            $.get( url1, params, function( data ) {
                 let end = window.performance.now();
                 x.push(end)
                 let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
@@ -71,7 +71,7 @@ $(function() {
         let start = window.performance.now();
         x.push(start)
         for (var i = 0; i< 30; i++) {
-            $.get( url4, params, function( data ) {
+            $.get( url2, params, function( data ) {
                 let end = window.performance.now();
                 x.push(end)
                 let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
@@ -87,7 +87,7 @@ $(function() {
         let start = window.performance.now();
         x.push(start)
         for (var i = 0; i< 30; i++) {
-            $.get( url4, params, function( data ) {
+            $.get( url3, params, function( data ) {
                 let end = window.performance.now();
                 x.push(end)
                 let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
