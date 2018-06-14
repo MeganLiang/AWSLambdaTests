@@ -51,53 +51,67 @@ $(function() {
     //-----------------------------------------
 
     $('#128btn30').click(function() {
+        let x = []
+        let start = window.performance.now();
+        x.push(start)
         for (var i = 0; i< 30; i++) {
-            var start = new Date().getTime();
-            $.get( url1, params, function( data ) {
-                var time = (new Date().getTime() - start)/1000;
-                console.log(time)
-                $(".results12830").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + time);
-                console.log(data.durationSeconds)
+            $.get( url4, params, function( data ) {
+                let end = window.performance.now();
+                x.push(end)
+                let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
+                $(".results12830").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + (time/1000));
+                console.log(data.durationSeconds);
+                console.log(time/1000)
             });
         }
 
     });
     $('#256btn30').click(function() {
+        let x = []
+        let start = window.performance.now();
+        x.push(start)
         for (var i = 0; i< 30; i++) {
-            var start = new Date().getTime();
-            $.get( url2, params, function( data ) {
-                var time = (new Date().getTime() - start)/1000;
-                console.log(time)
-                $(".results25630").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + time);
-                console.log(data.durationSeconds)
+            $.get( url4, params, function( data ) {
+                let end = window.performance.now();
+                x.push(end)
+                let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
+                $(".results25630").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + (time/1000));
+                console.log(data.durationSeconds);
+                console.log(time/1000)
             });
         }
 
     });
     $('#512btn30').click(function() {
+        let x = []
+        let start = window.performance.now();
+        x.push(start)
         for (var i = 0; i< 30; i++) {
-            var start = new Date().getTime();
-            $.get( url3, params, function( data ) {
-                var time = (new Date().getTime() - start)/1000;
-                console.log(time)
-                $(".results51230").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + time);
-                console.log(data.durationSeconds)
+            $.get( url4, params, function( data ) {
+                let end = window.performance.now();
+                x.push(end)
+                let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
+                $(".results51230").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + (time/1000));
+                console.log(data.durationSeconds);
+                console.log(time/1000)
             });
         }
 
     });
+
+
     $('#1024btn30').click(function() {
+        let x = []
+        let start = window.performance.now();
+        x.push(start)
         for (var i = 0; i< 30; i++) {
-
             $.get( url4, params, function( data ) {
-                var start = window.performance.now();
-                var end = window.performance.now();
-                var time = (end - start) + data.durationSeconds
-                $(".results102430").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + time);
+                let end = window.performance.now();
+                x.push(end)
+                let time = (x.slice(-1)[0]) - (x.slice(-2)[0])
+                $(".results102430").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + (time/1000));
                 console.log(data.durationSeconds);
-                console.log(time)
-            }).done(function() {
-
+                console.log(time/1000)
             });
         }
 
