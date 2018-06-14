@@ -107,7 +107,7 @@ pool = Pool(processes=repeat_n)
 
 
 start = timer()
-results = pool.map(http_get, urls)
+
 
 print('timer')
 print(timer() - start)

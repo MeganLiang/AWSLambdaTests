@@ -144,7 +144,7 @@ plt.plot(x, y_sd)
 plt.title('Standard Deviation for 2,3,4,5 loops')
 plt.xlabel('Number of loops')
 plt.ylabel('Duration (Seconds)')
-plt.savefig('loops_rerun.png', bbox_inches='tight')
+plt.savefig('loops_rerun.2png', bbox_inches='tight')
 plt.show()
 
 

@@ -18,21 +18,20 @@ module.exports = function (app) {
 
     });
 
-    /**
-     * This excludes some pages (public pages for the participants) from having to login
-     */
-    app.use(function(req, res, next){
-        var str = req.url;
-        var patt = /challenge/g;
+   app.use(function(req, res, next){
+       var str = req.url;
+       var patt = /login/g;
         console.log(str)
         console.log(patt.test(str))
 
         if(patt.test(str)){
-            next();
-            return;
+            return next();
+
+        }else {
+            res.status(401).send("Not logged in");
         }
-        res.status(401).send("Not logged in");
 
     });
+
 
 };
