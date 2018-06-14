@@ -91,9 +91,7 @@ $(function() {
 
             $.get( url4, params, function( data ) {
                 var start = window.performance.now();
-                console.log('s: ' + start)
                 var end = window.performance.now();
-                console.log('end ' + end)
                 var time = (end - start) + data.durationSeconds
                 $(".results102430").html('Duration seconds: ' + data.durationSeconds + ' max:' + data.max + ' loops:' + data.loops + ' client response time seconds: ' + time);
                 console.log(data.durationSeconds);
