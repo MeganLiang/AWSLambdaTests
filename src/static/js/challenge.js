@@ -1,7 +1,7 @@
 
 $(function() {
-    var url1 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes256MB";
-    var url2 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/Eratosthenes";
+    var url2 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes256MB";
+    var url1 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/Eratosthenes";
     var url3 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes512MB";
     var url4 = "https://vtwnqgwbdg.execute-api.us-west-2.amazonaws.com/prod/eratosthenes1024MB";
     var headers = {
